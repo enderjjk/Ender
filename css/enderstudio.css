@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'Porter Bold';
+  src: url("../font/PorterBold.otf");
+}
+@font-face {
+  font-family: 'Porter Medium';
+  src: url("../font/PorterMedium.otf");
+}
+body {
+  background: #ccc;
+  font-size: 0.65em;
+  color: #1d1d1b;
+  font-family: 'LTCircular', Arial, sans-serif;
+  line-height: 1.47;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+i {
+  font-style: italic;
+}
+p {
+  font-size: 1.6em;
+  line-height: 1.4em;
+  margin-bottom: 1.4em;
+  color: #5c5c5c;
+}
+.clear {
+  clear: both;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Porter Bold', Porter Bold, Georgia, "Georgia Regular";
+  line-height: 1.4em;
+  padding-bottom: 0.75em;
+  color: #1d1d1b;
+}
+b,
+strong {
+  font-weight: bold;
+}
+h2 {
+  font-family: 'Porter Bold', Porter Bold, Georgia, "Georgia Regular";
+}
+h3,
+h4 {
+  font-family: 'Porter Medium', Porter Medium, Georgia, "Georgia Regular";
+}
+h1.logo {
+  color: #333;
+  font-size: 3.5em;
+  letter-spacing: -0.1em;
+  text-align: center;
+}
+h1.logo a {
+  text-decoration: none;
+}
+.black {
+  color: #333;
+}
+.white {
+  color: #fff;
+}
+ul.navigation {
+  position: relative;
+  top: 20%;
+}
+ul.navigation li a {
+  font-family: 'Porter Medium', Porter Medium, Georgia, "Georgia Regular";
+  font-size: 3em;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 0.2em;
+  text-align: center;
+}
+ul.navigation li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 0.1em solid #f7f7f7;
+  transition: 0.2s;
+}
+ul.navigation li a:hover {
+  color: #f7f7f7;
+}
+ul.navigation li a:hover:after {
+  width: 100%;
+}
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 100%;
+  top: 0;
+  -webkit-transition: all 0.2s;
+  background-color: #64fa3c;
+  /* Black fallback color */
+  background-color: rgba(100, 250, 60, 0.9);
+  /* Black w/opacity */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+#home,
+#portfolio,
+#contact {
+  height: 100%;
+  width: 100%;
+  background: #ccc;
+  position: relative;
+}
