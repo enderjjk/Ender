@@ -240,7 +240,10 @@ nav {
 		}
 		& h2{ font-size:2.75em; }
 		& h1{ font-size:3.25m; }
-		& .intro-button{ margin-top:2em; }
+		& .intro-button{ 
+			margin-top:2em;
+			& a{ font-size:1.5em;}
+		}
 	}
 }
 .sections{ 
@@ -277,12 +280,6 @@ nav {
 				margin-bottom:2.5em;
 				border-bottom:1px solid #d1d1d1;
 			}
-			p{
-				&:last-of-type{
-					padding-bottom:0;
-					border-bottom:0;
-				}
-			}
 			& img{
 				max-height:200px;
 				max-width:200px;
@@ -297,7 +294,6 @@ nav {
 			&:hover{ color: @font-color-timeline; }
 			&.button{
 				margin-right:1em;
-				font-size:0.75em;
 				border-color:@font-color-timeline;
 				&:hover{
 					background-color:@font-color-timeline;
@@ -346,10 +342,10 @@ nav {
 button, a.button{
 	text-align:center;
     cursor: pointer;
+	font-size:1.25em;
     border: 3px solid @menu-bg-full;
     color: @menu-bg-full;
     font-family: @font-family-headers-medium;
-    font-size: 1.75em;
     padding: 0.5em 1.25em 0.75em 1.25em;
     text-transform: uppercase;
     display: inline-block;

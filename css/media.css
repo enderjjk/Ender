@@ -33,4 +33,6 @@
 	.content-items a { 
 		font-size: 1.2em;
 	}
+	.margin-bottom-1em{ margin-top:0; margin-bottom:1.5em; }
+	.intro-button a{ font-size:1.25em;}
 }
