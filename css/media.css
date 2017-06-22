@@ -15,19 +15,22 @@
 	.overlay {
 	    width: 100%;
 	}
-	.portfolio{
+	.section-2{
 		height:auto!important;
 		padding:4em auto;
 	}
-	.porfolio-description p{ height:auto; } 
+	.description p{ min-height:auto!important; } 
+	.description ul{ margin-bottom:1.5em; } 
+	.sections  p { font-size: 1.5em; }
+	.sections .text a.button{ font-size: 1em; }
 	.home, .contact{
 		background-position: center center;
 	}
-	.portfolio-content-items{
+	.content-items{
 		position:relative;
 		margin-bottom:2em;
 	}
-	.portfolio-content-items a { 
+	.content-items a { 
 		font-size: 1.2em;
 	}
 }

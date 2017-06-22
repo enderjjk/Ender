@@ -74,7 +74,7 @@ p{
 ul{
 	& li{font-size:1.6em;}
 }
-.grid-container{ max-width:1200px; }
+.grid-container{ max-width:1000px; }
 .clear{ clear:both; }
 h1, h2, h3, h4{
 	font-family: @font-family-headers-bold;
@@ -238,10 +238,12 @@ nav {
 			padding-bottom:0;
 			color:#fff;
 		}
+		& h2{ font-size:2.75em; }
+		& h1{ font-size:3.25m; }
 		& .intro-button{ margin-top:2em; }
 	}
 }
-.timeline{ 
+.sections{ 
 	padding:3em 0; 
 	background:@timeline-bg;
 	height:auto;
@@ -250,10 +252,10 @@ nav {
 		text-align:center;
 		padding-bottom:1.5em;
 	}
-	& .timeline-text{
+	& .text{
 		& h1{ color:@font-color-timeline; }
 		padding:3em auto; 
-		& .timeline-rows{
+		& .rows{
 			font-family:@font-body;
 			padding-bottom:2em;
 			margin-bottom:2.5em;
@@ -270,14 +272,42 @@ nav {
 				padding-bottom:0;
 				border-bottom:0;
 			}
+			&.border-bottom{
+				padding-bottom:2em;
+				margin-bottom:2.5em;
+				border-bottom:1px solid #d1d1d1;
+			}
+			p{
+				&:last-of-type{
+					padding-bottom:0;
+					border-bottom:0;
+				}
+			}
+			& img{
+				max-height:200px;
+				max-width:200px;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				border-radius: 50%;
+
+			}
 		}
 		& a { color:@font-color-timeline;
 			&::after{ background-color: @font-color-timeline; }
 			&:hover{ color: @font-color-timeline; }
+			&.button{
+				margin-right:1em;
+				font-size:0.75em;
+				border-color:@font-color-timeline;
+				&:hover{
+					background-color:@font-color-timeline;
+					color:#fff!important;
+				}
+			}
 		}
 	}
 }
-.porfolio-description{ 
+.description{ 
 	position:relative;
 	padding-top:1em;
 	border-top:0.2em solid @background;
@@ -314,6 +344,7 @@ nav {
 	}
 }
 button, a.button{
+	text-align:center;
     cursor: pointer;
     border: 3px solid @menu-bg-full;
     color: @menu-bg-full;
@@ -344,7 +375,7 @@ button, a.button{
 		& span{ color:#333; }
 	}
 }
-.portfolio{
+.section-2{
 	background: @recommendation-bg;
 	color:@off-white;
 	padding:3em 0; 
@@ -355,7 +386,7 @@ button, a.button{
 		padding-bottom:1.5em;
 		color:@portfolio-color-header;
 	}
-	& .portfolio-content-items{
+	& .content-items{
 		position:relative;
 		& h1{
 			color:@portfolio-color-header-hover;
@@ -368,6 +399,14 @@ a{
 		& span { position:relative; z-index:1; }
 		text-align:center;
 		&:hover{ color:#333!important; }
+		&.button{
+			color:@font-color-timeline;
+			border-color:@font-color-timeline;
+			&:hover{
+				background-color:@font-color-timeline;
+				color:#fff!important;
+			}
+		}
 	}
 }
 .sent{
