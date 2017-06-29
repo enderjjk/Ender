@@ -14,7 +14,7 @@ function closeNav() {
 
 $(function() {
 
-    $(document).on('click', '#menu-icon', function(){
+	$(document).on('click', '#menu-icon', function(){
 		$(this).toggleClass('is-active');
 		if ($(this).hasClass('is-active')){
 			openNav();
@@ -30,7 +30,7 @@ $(function() {
 			closeNav();
 		}	
 	}).on('click', '#submit', function() {
-        var name = $("#form_name").val(),
+		var name = $("#form_name").val(),
 			email = $("#form_email").val(),
 			text = $("#form_msg").val();
 
@@ -68,10 +68,10 @@ $(function() {
 				$('textarea#form_msg').addClass('error');
 			}
 		}
-        return false;
+		return false;
 		
 		
-    }).on('click', 'a[href*="#"]:not([href="#"])', function() {
+	}).on('click', 'a[href*="#"]:not([href="#"])', function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 		  var target = $(this.hash);
 		  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -86,29 +86,11 @@ $(function() {
 		$(this).removeClass('error');
 		$('#error-msg').hide();
 	});
-	/*
-	$('#home').waypoint(function() {
-		$('#menu-icon').removeClass('menu-timeline-color');
-	},{
-	  offset: 0 // Apply "stuck" when element 30px from top
+	$(document).ready(function() {
+		setTimeout(function(){ 
+			$("body").removeClass("loading");
+			$('.loader').remove();
+		}, 3000);
+
 	});
-	
-	$('#q-1').waypoint(function() {
-		$('#menu-icon').removeClass('menu-timeline-color');
-	},{
-	  offset: 0 // Apply "stuck" when element 30px from top
-	}); 
-	
-	$('#portfolio').waypoint(function() {
-		$('#menu-icon').removeClass('menu-timeline-color');
-	},{
-	  offset: 0 // Apply "stuck" when element 30px from top
-	}); 
-	
-	$("#timeline").waypoint(function() {
-       $('#menu-icon').addClass('menu-timeline-color');
-    },{
-		  offset: 0 // Apply "stuck" when element 30px from top
-	});
-	*/
 });

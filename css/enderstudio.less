@@ -61,6 +61,34 @@ body{
     padding: 0;
     -webkit-transition: none;
     -webkit-font-smoothing: antialiased;
+	& .loader {
+		height:0;
+		display:none;
+	}
+	& section { display:block; }
+	&.loading {
+		background-color: #333;
+		& section { display:none; }
+		& .loader {
+			display: block;
+			width: 30px;
+			height: 30px;
+			position: relative;
+			border: 4px solid @portfolio-color-header;
+			top: 50%;
+			margin-top:-15px;
+			margin-left:-15px;
+			left: 50%;
+			animation: loader 4s infinite ease;
+			& .loader-inner {
+				vertical-align: top;
+				display: block;
+				width: 100%;
+				background-color: @portfolio-color-header;
+				animation: loader-inner 4s infinite ease-in;
+			}
+		}
+	}
 }
 i{ font-style:italic; }
 p{
@@ -283,6 +311,13 @@ nav {
 				-webkit-border-radius: 50%;
 				-moz-border-radius: 50%;
 				border-radius: 50%;
+				cursor: -moz-zoom-in; 
+				cursor: -webkit-zoom-in; 
+				cursor: zoom-in;
+				&:hover{
+					opacity:0.5;
+					
+				}
 
 			}
 		}
@@ -396,6 +431,7 @@ button, a.button{
 a{
 	&.button-portfolio{ 
 		margin:0.25em 0;
+		font-size:1.25em;
 		& span { position:relative; z-index:1; }
 		text-align:center;
 		&:hover{ color:#333!important; }
@@ -465,6 +501,10 @@ a{
 				-moz-animation:cyclethree 25s linear infinite;
 				-webkit-animation:cyclethree 25s linear infinite;		
 			}
+			&.fourhanimation {
+				-moz-animation:cyclefour 25s linear infinite;
+				-webkit-animation:cyclefour 25s linear infinite;		
+			}
 		}
 		&:hover li, &:hover {
 			& .progress-bar {
@@ -485,4 +525,5 @@ a{
 	-moz-animation:fullexpand 25s ease-out infinite;
 	-webkit-animation:fullexpand 25s ease-out infinite;
 }
+
 @import "hover.less";
