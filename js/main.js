@@ -90,6 +90,8 @@ $(function() {
 		setTimeout(function(){ 
 			$("body").removeClass("loading");
 			$('.loader').remove();
+			$("section").fadeIn("slow");
+			
 		}, 3000);
 
 	});
