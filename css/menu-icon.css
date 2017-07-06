@@ -1,7 +1,7 @@
 .menu-icon {
 	position:fixed;
-	top:0;
-	right:0;
+	top:10px;
+	right:10px;
 	padding: 15px;
 	display: inline-block;
 	cursor: pointer;
@@ -18,6 +18,7 @@
 	margin: 0;
 	overflow: visible;
 	z-index:4; 
+	background:#515151;
 }
 .menu-icon:focus, .menu-icon:visited{ border:none; }
 .menu-icon:hover {
@@ -818,8 +819,11 @@ bottom: -10px; }
 .menu-icon--elastic.is-active .menu-icon-inner::after, .menu-icon--elastic.is-active .menu-icon-inner{ background-color:#333; }
 
 .menu-icon--elastic.menu-timeline-color .menu-icon-inner, .menu-icon--elastic.menu-timeline-color .menu-icon-inner::before, .menu-icon--elastic.menu-timeline-color .menu-icon-inner::after{
-	background-color: #FF4070;
+	background-color: #333;
 }
 .menu-icon--elastic.is-active.menu-timeline-color .menu-icon-inner, .menu-icon--elastic.menu-timeline-color .menu-icon-inner::before, .menu-icon--elastic.menu-timeline-color .menu-icon-inner::after{
-	background-color: #FF4070;
+	background-color: #333;
+}
+.menu-icon.is-active {
+	background:none;
 }

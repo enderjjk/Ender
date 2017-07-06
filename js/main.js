@@ -86,6 +86,18 @@ $(function() {
 		$(this).removeClass('error');
 		$('#error-msg').hide();
 	});
+	$("#testimonial-slider").owlCarousel({
+        items:1,
+        itemsDesktop:[1000,1],
+        itemsDesktopSmall:[980,1],
+        itemsTablet:[768,1],
+        itemsMobile:[650,1],
+        pagination:true,
+        navigation:false,
+        slideSpeed:1000,
+        autoPlay:true
+    });
+	
 	$(document).ready(function() {
 		setTimeout(function(){ 
 			$("body").removeClass("loading");
