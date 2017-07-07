@@ -28,9 +28,9 @@
 	}
 	.portfolio-image img{ margin-left:25%; }
 	.portfolio-button-position {
-		margin-left: 25%;
+		left: 20%;
 		top: 50%;
-		margin-top: -20px;
+		margin: -20px 0 0 0;
 	}
 	.content-items a { 
 		font-size: 1.2em;
@@ -77,4 +77,6 @@
 		transition-timing-function: ease;
 
 	}
+	.row-style-1 .row-cell{  padding-bottom: 4em; }
+	.row-style-1 .row-cell.portfolio-image{  padding-bottom: 0; }
 }
