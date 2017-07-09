@@ -26,7 +26,7 @@
 	75% { opacity:0; }
 	100%{ opacity:0; }
 }
-@-moz-keyframes cyclefour  
+@-moz-keyframes cyclefour  {
 	0%	{ opacity:0;}
 	72% { opacity:0; }
 	75% { opacity:1; }

@@ -36,8 +36,8 @@ src: url('../fonts/prometheus.ttf'),
 @font-color-1st: #1d1d1b;
 @font-color-2nd: #5c5c5c;
 @font-color-3rd: #333;
-@font-color-timeline:#FF4070;
-@font-color-timeline-darker:#e2305d;
+@font-color-timeline:#ff4242;
+@font-color-timeline-darker:#ee2121;
 @font-timeline: #515151;
 @background: #e6e6e6;
 @timeline-bg:#f5f5f5;
@@ -141,8 +141,9 @@ a{
 	}
 }
 h1{ font-family:@font-family-headers-bold; font-size:3em; line-height:1.1em; word-spacing:0.1em; }
-h2{	font-family:@font-family-headers-bold; font-size:2.5em; line-height:1.1em; word-spacing:0.1em; }
-h3, h4{	font-family:@font-family-headers-medium; font-size:1.6em; line-height:1.1em; word-spacing:0.1em; }
+h2{ font-family:@font-family-headers-bold; font-size:3em; line-height:1.1em; word-spacing:0.1em; }
+h3{	font-family:@font-family-headers-bold; font-size:2.5em; line-height:1.1em; word-spacing:0.1em; }
+h4, h5{	font-family:@font-family-headers-medium; font-size:1.6em; line-height:1.1em; word-spacing:0.1em; }
 
 .overlay {
     /* Height & width depends on how you want to reveal the overlay (see JS below) */    
@@ -200,7 +201,7 @@ nav {
 	height:100%;
 	background-image: url("../images/contact.jpg");
 	background-size:cover;	
-	& h1{
+	& h2{
 		color:#fff;
 		text-align:center;
 		padding-bottom:1.5em;
@@ -237,7 +238,7 @@ nav {
 		margin-top:3em;
 		text-align:center;
 		color:#fff;
-		& h2{
+		& h3{
 			color:#fff;
 		}
 	}
@@ -263,14 +264,14 @@ nav {
 	& > div{
 		position:absolute;
 		bottom:40%;
-		& h1, & h2{
+		& h2, & h3{
 			word-wrap:break-word;
 			text-wrap:unrestricted;
 			padding-bottom:0;
 			color:#fff;
 		}
 		& h2{ font-size:2.75em; }
-		& h1{ font-size:3.25em; }
+		& h3{ font-size:3.25em; }
 		& .intro-button{ 
 			margin-top:2em;
 		}
@@ -281,13 +282,13 @@ nav {
 	background:@timeline-bg;
 	height:auto;
 	&.freelance{ padding:0 0 3em 0;  }
-	& h1{
+	& h2{
 		color:@portfolio-color-header;
 		text-align:center;
 	}
 	& .text{
 		padding:3em auto; 
-		& h1{ 
+		& h2{ 
 			color:@font-color-timeline;
 			padding:0 0 1.5em 0;	
 		}
@@ -317,9 +318,10 @@ nav {
 			}
 			&.row-style-1{ 
 				& h3{ 
-					text-transform: uppercase;
-					padding-top:2em;
-					padding-bottom:2em;
+					font-family:@font-family-headers-bold;
+					padding-top: 1em;
+					padding-bottom: 1em;
+					font-size: 2.5em;
 				} 
 				& .row-cell{
 					flex-direction: row;
@@ -422,15 +424,15 @@ button, a.button{
 	padding:3em 0; 
 	height:100%;
 	float:left;
-	& h1{
+	& h2{
 		text-align:center;
 		padding-bottom:1.5em;
 		color:@portfolio-color-header;
 	}
 	& .content-items{
 		position:relative;
-		& h1{
-			color:@portfolio-color-header-hover;
+		& h3{
+			color:#fff;
 		}
 	}
 }
@@ -525,7 +527,7 @@ a{
 		& .testimonial-icon{
 			width: 50px;
 			height: 45px;
-			background: #ff4242;
+			background: @font-color-timeline;
 			text-align: center;
 			font-size: 22px;
 			color: @off-white;
@@ -589,7 +591,7 @@ a{
 			}
 			&.active { 
 				& span{
-				background: #ff4242;
+				background: @font-color-timeline;
 				}
 			}
 		}
